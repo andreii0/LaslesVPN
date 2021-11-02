@@ -1,12 +1,27 @@
-.statistics{
-    position: absolute;
-width: 1140px;
-height: 200px;
-left: 150px;
-top: 664.55px;
+/*что с табуляцией? исправляй как я поправила 1е правило*/
 
-background: #FFFFFF;
-border-radius: 10px;
+/*для тайлов и других элементов со встроенными маргинами обнуляем всегда маргины, потом пишем свои, если надо. На проекте обычно это делает бибилотека reset или normalize*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.statistics {
+    position: absolute;
+    width: 1140px;
+    height: 200px;
+    left: 150px;
+    top: 664.55px; /*лишний раз без необходимости числа с плавающими точками не задаем, влияет на производительность. Задаем целые числа. Исключение - десятая часть для flex элементов в процентах (flex-basis: 22.4%)*/
+    background: #FFFFFF;
+    border-radius: 10px;
 }
 
 .statistics-users{
@@ -36,7 +51,7 @@ top: 37.21px;
 
 
 
-
+/*это что за пустота?*/
 
 
 
