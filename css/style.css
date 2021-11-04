@@ -7,114 +7,154 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+margin: 0;
 }
 
 p {
-    margin: 0;
+margin: 0;
+}
+
+.body {
+max-weidth 1440px;
+
 }
 
 .statistics {
-    position: absolute;
-    width: 1140px;
-    height: 200px;
-    left: 150px;
-    top: 664.55px; /*лишний раз без необходимости числа с плавающими точками не задаем, влияет на производительность. Задаем целые числа. Исключение - десятая часть для flex элементов в процентах (flex-basis: 22.4%)*/
-    background: #FFFFFF;
-    border-radius: 10px;
-}
-
-.statistics-users{
+align-items;
 position: absolute;
-left: 91px;
-width: 155px;
-height: 53px;
-top: 67.5px;
-bottom: 67.5px;
-}
-.statistics-location{
-    position: absolute;
-    left: 350px;
-    width: 155px;
-    height: 53px;
-    top: 37.21px;
-}
-.statistics-server{
-    position: absolute;
-left: 700px;
-width: 155px;
-height: 53px;
-top: 37.21px;
+width: 1140px;
+height: 200px;
+left: 150px;
+top: 50px;
+/*лишний раз без необходимости числа с плавающими точками не задаем, влияет на производительность. Задаем целые числа. Исключение - десятая часть для flex элементов в процентах (flex-basis: 22.4%)*/
+background: #FFFFFF;
+border-radius: 10px;
+
 }
 
+.shadow {
+position: absolute;
+width: 1068.84px;
+height: 189.22px;
+left: 185.58px;
+top: 50px;
 
-
-
-
-/*это что за пустота?*/
-
-
-
-
-
-
-.line-users{
-    position: absolute;
-    left: 350px;
-    top: 25px;
+background: #0D1025;
+opacity: 0.06;
+filter: blur(114px);
+border-radius: 10px;
 }
-.line-servers{
-    position: absolute;
-    left: 750px;
-    top: 25px;
+
+.statistics-icons {
+flex-grow: 1;
+flex-basis: 33.33%;
+display: flex;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: flex-start;
 }
-.info-image{
-    position: absolute;
+
+
+
+
+.icons-image {
+width: 55px;
+height: 55px;
+border-radius: 50%;
+background-color: #FFECEC;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 36px;
+color: #F53838;
+flex-basis: 55px;
+flex-shrink: 0;
+}
+
+.statistics-content {
+flex-grow: 1;
+}
+
+.statistics__number {
+font-family: Rubik;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 30px;
+color: #0B132A;
+display: block;
+}
+
+.statistics__name {
+font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+color: #4F5665;
+display: block;
+}
+
+.info-image {
+position: absolute;
 width: 508.12px;
 height: 414.71px;
 left: 184.52px;
-top: 960.38px;
+top: 300px;
+margin-top: 95px;
 }
 
-.info-title{
-    position: absolute;
+.info-cotent {
+max-width: 430px;
+}
+
+.info-title {
+position: absolute;
 width: 383.41px;
 height: 100px;
-left: 862.12px;
-top: 1014.55px;
-
+left: 861px;
+top: 300px;
 font-family: Rubik;
 font-style: normal;
 font-weight: 500;
 font-size: 35px;
 line-height: 50px;
 color: #0B132A;
+margin-top: 105px;
 }
-.info-text{
+
+.info-text {
 position: absolute;
 width: 427.88px;
 height: 60px;
 left: 862.12px;
-top: 1134.55px;
-
+top: 500px;
 font-family: Rubik;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 30px;
 color: #4F5665;
+margin-top: 20px;
 }
-.info-list{
-    position: absolute;
+
+.info-list {
+position: absolute;
 width: 179px;
 height: 30px;
 left: 896.2px;
-top: 1214.55px;
-
+top: 600px;
 font-family: Rubik;
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 30px;
 color: #4F5665;
+margin-top: 20px;
 }
+
+/*position: absolute;
+width: 180px;
+height: 30px;
+left: 896.2px;
+top: 1214.55px;*/
