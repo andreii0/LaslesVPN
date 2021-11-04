@@ -8,17 +8,17 @@
     <title>Lesson1</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet"> почему тут только 1 жирность шрифта(700), а используешь ты 3? -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="body">
     <main class="main">
-        <div class="shadow"> </div>
+        <!-- <div class="shadow"> </div> никаких блоков для стилей, никогда! максимум псевдоэлементы -->
         <section class="content">
             <div class="statistics">
-                <div class="statistics-icons">
-                    <!--смотри, у svg есть повторяющиеся атрибуты, а так же атрибуты, которые можно сделать свойствДавай добавим к svg класс и добавим fill, width, height как стили-->
+                <div class="statistics-icons"> <!--это явно не класс icons, потому что это не просто иконки, тут подойдет item, statistic, list-item и тп-->
                     <div class="icons-image">
                         <img src="img/Human.svg" alt="">
                     </div>
@@ -27,8 +27,6 @@
                         <span class="statistics__name">Users</span>
                     </div>
                 </div>
-                <!--тут со вложенностью проблемы, почему вложенный тег находится на одной строке с родительским?-->
-                <!--линии эти нафиг удаляем, svg сильно нагружает страницу, делаем через псевдоэлемент-->
                 <div class="statistics-icons">
                     <div class="icons-image">
                         <img src="img/Vector.svg" alt="">
@@ -48,48 +46,19 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="info">
                 <div class="info-image">
                     <img src="img/Illustration 2.png" alt="">
                 </div>
-                <div class="info-cotent">
-                    <h2 class="info-title">We Provide Many Features You Can Use</h2>
-                    <p class="info-text">You can explore the features that we provide with fun and have their own
-                        functions
-                        each feature.</p>
-                    <div class="info-list">
-                        <!--проблема со вложенностью тегов-->
-                        <div><svg width="21" height="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-                                <!-- и это вообще не svg, а span внутри которого svg галочка(чек)-->
-                                <!--еще раз - у svg не должно быть фона, фон и круг задаем с помощью span, вытащи svg из фигмы без фона-->
-                                <path
-                                    d="M10.1215 0.549316C4.60746 0.549316 0.12146 5.03532 0.12146 10.5493C0.12146 16.0633 4.60746 20.5493 10.1215 20.5493C15.6355 20.5493 20.1215 16.0633 20.1215 10.5493C20.1215 5.03532 15.6355 0.549316 10.1215 0.549316ZM8.12246 14.9623L5.11691 11.9632C4.72616 11.5733 4.72537 10.9405 5.11515 10.5496C5.50517 10.1585 6.13847 10.1578 6.52939 10.548L8.12046 12.1363L12.7075 7.54932C13.0979 7.15885 13.731 7.15885 14.1215 7.54932C14.5119 7.93978 14.5119 8.57285 14.1215 8.96332L8.12246 14.9623Z"
-                                    fill="#2FAB73" />
-                            </svg></div>
-                        <p>Powerfull online protection.</p>
-                        <!--стиль по классу-->
-                        <div> <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.1215 0.549316C4.60746 0.549316 0.12146 5.03532 0.12146 10.5493C0.12146 16.0633 4.60746 20.5493 10.1215 20.5493C15.6355 20.5493 20.1215 16.0633 20.1215 10.5493C20.1215 5.03532 15.6355 0.549316 10.1215 0.549316ZM8.12246 14.9623L5.11691 11.9632C4.72616 11.5733 4.72537 10.9405 5.11515 10.5496C5.50517 10.1585 6.13847 10.1578 6.52939 10.548L8.12046 12.1363L12.7075 7.54932C13.0979 7.15885 13.731 7.15885 14.1215 7.54932C14.5119 7.93978 14.5119 8.57285 14.1215 8.96332L8.12246 14.9623Z"
-                                    fill="#2FAB73" />
-                            </svg></div>
-                        <p>Internet without borders.</p>
-                        <div> <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.1215 0.549316C4.60746 0.549316 0.12146 5.03532 0.12146 10.5493C0.12146 16.0633 4.60746 20.5493 10.1215 20.5493C15.6355 20.5493 20.1215 16.0633 20.1215 10.5493C20.1215 5.03532 15.6355 0.549316 10.1215 0.549316ZM8.12246 14.9623L5.11691 11.9632C4.72616 11.5733 4.72537 10.9405 5.11515 10.5496C5.50517 10.1585 6.13847 10.1578 6.52939 10.548L8.12046 12.1363L12.7075 7.54932C13.0979 7.15885 13.731 7.15885 14.1215 7.54932C14.5119 7.93978 14.5119 8.57285 14.1215 8.96332L8.12246 14.9623Z"
-                                    fill="#2FAB73" />
-                            </svg></div>
-                        <p>Supercharger VPN</p>
-                        <div></div><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M10.1215 0.549316C4.60746 0.549316 0.12146 5.03532 0.12146 10.5493C0.12146 16.0633 4.60746 20.5493 10.1215 20.5493C15.6355 20.5493 20.1215 16.0633 20.1215 10.5493C20.1215 5.03532 15.6355 0.549316 10.1215 0.549316ZM8.12246 14.9623L5.11691 11.9632C4.72616 11.5733 4.72537 10.9405 5.11515 10.5496C5.50517 10.1585 6.13847 10.1578 6.52939 10.548L8.12046 12.1363L12.7075 7.54932C13.0979 7.15885 13.731 7.15885 14.1215 7.54932C14.5119 7.93978 14.5119 8.57285 14.1215 8.96332L8.12246 14.9623Z"
-                                fill="#2FAB73" />
-                        </svg>
-                        <p>No specific time limits</p>
-                    </div>
+                <div class="info-content">
+                    <h2 class="h2 info-title">We Provide Many Features You Can Use</h2>
+                    <p class="text info-text">You can explore the features that we provide with fun and have their own functions each feature.</p>
+                    <ul class="info-list">
+                        <li class="info-item">Powerfull online protection.</li>
+                        <li class="info-item">Internet without borders.</li>
+                        <li class="info-item">Supercharger VPN</li>
+                        <li class="info-item">No specific time limits</li>
+                    </ul>
                 </div>
             </div>
             </div>
