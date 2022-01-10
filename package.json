@@ -28,9 +28,7 @@
     "sass": "^1.44.0"
   },
   "dependencies": {
-    "gilp": "^0.0.10",
-    "gulp-rename": "^1.4.0",
-    "underscore": "^1.13.1"
+    "gulp-rename": "^1.4.0"
   },
   "browserslist": [
     "last 3 version",
